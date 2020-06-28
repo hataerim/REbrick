@@ -25,6 +25,79 @@ moveTo(0,0)
 resizeTo(800,600)
 </script>
 <script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+	
+	<script>
+$(function(){
+  var interval = 5000;
+  $('.slideshow1').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+$(function(){
+  var interval = 5000;
+  $('.slideshow2').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+$(function(){
+  var interval = 5000;
+  $('.slideshow3').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+</script>
+
 
 <style media="screen">
   html{
@@ -480,77 +553,6 @@ resizeTo(800,600)
 
 
 
-<script>
-$(function(){
-  var interval = 5000;
-  $('.slideshow1').each(function(){
-    var timer;
-    var container = $(this);
-    function switchImg(){
-      var anchors = container.find('a');
-      var first = anchors.eq(0);
-      var second = anchors.eq(1);
-      first.fadeOut().appendTo(container);
-      second.fadeIn();}
-
-    function startTimer(){
-      timer = setInterval(switchImg, interval);}
-
-    function stopTimer(){
-      clearInterval(timer);}
-
-    container.find('a').hover(stopTimer,startTimer);
-    startTimer();
-  });
-});
-
-$(function(){
-  var interval = 5000;
-  $('.slideshow2').each(function(){
-    var timer;
-    var container = $(this);
-    function switchImg(){
-      var anchors = container.find('a');
-      var first = anchors.eq(0);
-      var second = anchors.eq(1);
-      first.fadeOut().appendTo(container);
-      second.fadeIn();}
-
-    function startTimer(){
-      timer = setInterval(switchImg, interval);}
-
-    function stopTimer(){
-      clearInterval(timer);}
-
-    container.find('a').hover(stopTimer,startTimer);
-    startTimer();
-  });
-});
-
-$(function(){
-  var interval = 5000;
-  $('.slideshow3').each(function(){
-    var timer;
-    var container = $(this);
-    function switchImg(){
-      var anchors = container.find('a');
-      var first = anchors.eq(0);
-      var second = anchors.eq(1);
-      first.fadeOut().appendTo(container);
-      second.fadeIn();}
-
-    function startTimer(){
-      timer = setInterval(switchImg, interval);}
-
-    function stopTimer(){
-      clearInterval(timer);}
-
-    container.find('a').hover(stopTimer,startTimer);
-    startTimer();
-  });
-});
-
-</script>
 
 
 </html>
