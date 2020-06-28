@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script language="JavaScript">
+  <!—
+  top.window.moveTo(0,0);
+  if (document.all) {
+  top.window.resizeTo(screen.availWidth,screen.availHeight);
+  }
+  else if (document.layers||document.getElementById) {
+  if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+  top.window.outerHeight = screen.availHeight;
+  top.window.outerWidth = screen.availWidth;
+  }
+  }
+  //—>
+  </script>
+  <script language=javascript>
+moveTo(0,0)
+resizeTo(800,600)
+</script>
+
+
+<style media="screen">
+  html{
+    position: relative;
+    /*width: 1280px;*/
+    border: 1px solid blue;
+  }
+
+  /*기본적인 배치*/
+  .header{background-color: white; width: 1280px; height: 100px;}
+  .floating_left{background-color: white; width: 3%; float: left; margin-left: 20px; margin-top: 120px;}
+  .floating_footer{ width: 30%;  float: left; clear:both; margin-top: -90px; margin-left: 20px;}
+  .background_floor{ width: 730px; float: right; margin-top: 260px; }
+
+
+  /*헤더 배치*/
+  .text1{margin-top: 20px; float: left; font-size: 8px; margin-left: 30px; color: #d3d3d3;}
+  .menu1{margin-top: 20px; margin-left: 250px;}
+  .menu2{margin-top: 20px; margin-left: 200px;}
+
+  /*계단1배치*/
+  .slideshow1{
+  	width:303px;
+  	height:300px;
+  	margin-right: 360px;
+  	margin-top: -300px;
+  	float: right;
+  	position:relative;
+    clear: both;
+  }
+  .slideshow1 a{
+  	position:absolute;
+  	top:0;
+  	left:0;
+  }
+  .slideshow1 a.alt{
+  	display:none;
+  }
+
+  .container1 {
+    	position: relative;
+   	 width: 50%;
+  	}
+    .overlay1{
+  	    position : absolute;
+  	    bottom: 0;
+  	    left: 10;
+  	    right: 0;
+  	    background-image: url("yellowcar_big.png");
+  	    overflow: hidden;
+  	    width: 0;
+  	    height: 672px;
+  	    transition: .5s ease;
+  			margin-bottom: -200px;
+  			margin-right: 300px;
+  	  }
+  	  .container1:hover .overlay1{width: 1136px;}
+
+
+      .slideshow4{
+      	width:303px;
+      	height:300px;
+      	margin-right: 360px;
+      	margin-top: -300px;
+      	float: right;
+      	position:relative;
+        clear: both;
+      }
+      .slideshow4 a{
+      	position:absolute;
+      	top:0;
+      	left:0;
+      }
+      .slideshow4 a.alt{
+      	display:none;
+      }
+
+      .container4 {
+        	position: relative;
+       	 width: 50%;
+      	}
+        .overlay4{
+      	    position : absolute;
+      	    bottom: 0;
+      	    left: 10;
+      	    right: 0;
+      	    background-image: url("greentruck_big.png");
+      	    overflow: hidden;
+      	    width: 0;
+      	    height: 672px;
+      	    transition: .5s ease;
+      			margin-bottom: -200px;
+      			margin-right: 300px;
+      	  }
+      	  .container4:hover .overlay4{width: 1136px;}
+
+
+
+          .slideshow7{
+          	width:303px;
+          	height:300px;
+          	margin-right: 360px;
+          	margin-top: -300px;
+          	float: right;
+          	position:relative;
+            clear: both;
+          }
+          .slideshow7 a{
+          	position:absolute;
+          	top:0;
+          	left:0;
+          }
+          .slideshow7 a.alt{
+          	display:none;
+          }
+
+          .container7 {
+            	position: relative;
+           	 width: 50%;
+          	}
+            .overlay7{
+          	    position : absolute;
+          	    bottom: 0;
+          	    left: 10;
+          	    right: 0;
+          	    background-image: url("purplecar_big.png");
+          	    overflow: hidden;
+          	    width: 0;
+          	    height: 672px;
+          	    transition: .5s ease;
+          			margin-bottom: -200px;
+          			margin-right: 300px;
+          	  }
+          	  .container7:hover .overlay7{width: 1136px;}
+
+
+
+    /*계단2배치*/
+    .slideshow2{
+    	width:303px;
+    	height:300px;
+    	margin-right: 160px;
+    	margin-top:-485px;
+    	float: right;
+    	position:relative;
+      clear: both;
+    }
+    .slideshow2 a{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    }
+    .slideshow2 a.alt{
+    	display:none;
+    }
+    .container2 {
+      	position: relative;
+     	 width: 50%;
+    	}
+      .overlay2{
+    	    position : absolute;
+    	    bottom: 0;
+    	    left: 10;
+    	    right: 0;
+    	    background-image: url("whitemoto_big.png");
+    	    overflow: hidden;
+    	    width: 0;
+    	    height: 672px;
+    	    transition: .5s ease;
+    			margin-bottom: -340px;
+    			margin-right: 500px;
+    	  }
+    	  .container2:hover .overlay2{width: 1136px;}
+
+
+        .slideshow5{
+        	width:303px;
+        	height:300px;
+        	margin-right: 160px;
+        	margin-top:-485px;
+        	float: right;
+        	position:relative;
+          clear: both;
+        }
+        .slideshow5 a{
+        	position:absolute;
+        	top:0;
+        	left:0;
+        }
+        .slideshow5 a.alt{
+        	display:none;
+        }
+        .container5 {
+          	position: relative;
+         	 width: 50%;
+        	}
+          .overlay5{
+        	    position : absolute;
+        	    bottom: 0;
+        	    left: 10;
+        	    right: 0;
+        	    background-image: url("gbcar_big.png");
+        	    overflow: hidden;
+        	    width: 0;
+        	    height: 672px;
+        	    transition: .5s ease;
+        			margin-bottom: -340px;
+        			margin-right: 500px;
+        	  }
+        	  .container5:hover .overlay5{width: 1136px;}
+
+
+            .slideshow8{
+            	width:303px;
+            	height:300px;
+            	margin-right: 160px;
+            	margin-top:-485px;
+            	float: right;
+            	position:relative;
+              clear: both;
+            }
+            .slideshow8 a{
+            	position:absolute;
+            	top:0;
+            	left:0;
+            }
+            .slideshow8 a.alt{
+            	display:none;
+            }
+            .container8 {
+              	position: relative;
+             	 width: 50%;
+            	}
+              .overlay8{
+            	    position : absolute;
+            	    bottom: 0;
+            	    left: 10;
+            	    right: 0;
+            	    background-image: url("rolex_big.png");
+            	    overflow: hidden;
+            	    width: 0;
+            	    height: 672px;
+            	    transition: .5s ease;
+            			margin-bottom: -340px;
+            			margin-right: 600px;
+            	  }
+            	  .container8:hover .overlay8{width: 1400px;}
+
+    /*계단3배치*/
+    .slideshow3{
+    	width:280px;
+    	height:300px;
+    	margin-right: 0px;
+    	margin-top: -665px;
+    	float: right;
+    	position:relative;
+    }
+    .slideshow3 a{
+    	position:absolute;
+    	top:0;
+    	left:0;
+    }
+    .slideshow3 a.alt{
+    	display:none;
+    }
+    .container3 {
+      	position: relative;
+     	 width: 50%;
+    	}
+    	.overlay3{
+    	    position : absolute;
+    	    bottom: 0;
+    	    left: 10;
+    	    right: 0;
+    	    background-image: url("graycar_big.png");
+    	    overflow: hidden;
+    	    width: 0;
+    	    height: 672px;
+    	    transition: .5s ease;
+    			margin-bottom: -550px;
+    			margin-right: 620px;
+    	  }
+    	  .container3:hover .overlay3{width: 1136px;}
+
+
+        .slideshow6{
+        	width:280px;
+        	height:300px;
+        	margin-right: 0px;
+        	margin-top: -665px;
+        	float: right;
+        	position:relative;
+        }
+        .slideshow6 a{
+        	position:absolute;
+        	top:0;
+        	left:0;
+        }
+        .slideshow6 a.alt{
+        	display:none;
+        }
+        .container6 {
+          	position: relative;
+         	 width: 50%;
+        	}
+        	.overlay6{
+        	    position : absolute;
+        	    bottom: 0;
+        	    left: 10;
+        	    right: 0;
+        	    background-image: url("grcar_big.png");
+        	    overflow: hidden;
+        	    width: 0;
+        	    height: 672px;
+        	    transition: .5s ease;
+        			margin-bottom: -550px;
+        			margin-right: 620px;
+        	  }
+        	  .container6:hover .overlay6{width: 1136px;}
+
+
+            .slideshow9{
+            	width:280px;
+            	height:300px;
+            	margin-right: 0px;
+            	margin-top: -665px;
+            	float: right;
+            	position:relative;
+            }
+            .slideshow9 a{
+            	position:absolute;
+            	top:0;
+            	left:0;
+            }
+            .slideshow9 a.alt{
+            	display:none;
+            }
+            .container9 {
+              	position: relative;
+             	 width: 50%;
+            	}
+            	.overlay9{
+            	    position : absolute;
+            	    bottom: 0;
+            	    left: 10;
+            	    right: 0;
+            	    background-image: url("policecar_big.png");
+            	    overflow: hidden;
+            	    width: 0;
+            	    height: 672px;
+            	    transition: .5s ease;
+            			margin-bottom: -550px;
+            			margin-right: 700px;
+            	  }
+            	  .container9:hover .overlay9{width: 1400px;}
+
+
+
+
+
+
+</style>
+
+
+</head>
+
+<body>
+<div class="header">
+  <div class="text1">
+    리브릭은 어쩌구 저쩌구fksdjfkjsldjfjskdfjdlsk <br>adssfasdfasdfs
+  </div>
+  <img src="upload.png" alt="" class="menu1">
+  <img src="making_pdf.png" alt="" class="menu2">
+</div>
+  <img src="custom_sticker.png" alt="" class="floating_left">
+  <img src="floor2.png" alt="" class="background_floor">
+  <img src="rebrick_name.png" alt="" class="floating_footer">
+
+
+
+  <div class="slideshow1">
+
+  	<div class="container1">
+  		  <a href="http://example.com"><img src="yellowcar.png" alt=" " width="253px" height="218px" ></a>
+  			<div class="overlay1">
+  			</div>
+  	</div>
+   	<div class="container4">
+  		  <a href="http://example.com" class="alt"><img src="greentruck.png" alt=" "  width="253px" height="218px" ></a>
+  			<div class="overlay4">
+  			</div>
+  	</div>
+  	<div class="container7">
+  		  <a href="http://example.com" class="alt"><img src="purplecar.png" alt=" "  width="253px" height="218px" ></a>
+  			<div class="overlay7">
+  			</div>
+  	</div>
+
+
+  </div>
+
+
+
+
+  <div class="slideshow2">
+
+  	<div class="container2">
+  		 <a href="cardnew.html"><img src="whitemoto.png" alt="" width="253px" height="218px" id="moto"></a>
+  			<div class="overlay2">
+  			</div>
+  	</div>
+  	<div class="container5">
+  		   <a href="http://example.com" class="alt"><img src="gbcar.png" alt="" width="253px" height="218px" id="greentruck"></a>
+  			<div class="overlay5">
+  			</div>
+  	</div>
+  	<div class="container8">
+  		   <a href="http://example.com" class="alt"><img src="rolex.png" alt="" width="253px" height="218px" id="greentruck"></a>
+  			<div class="overlay8">
+  			</div>
+  	</div>
+
+  </div>
+
+
+
+
+
+  <div class="slideshow3">
+  	<div class="container3">
+  		   <a href="http://example.com"><img src="graycar.png" alt="" width="253px" height="218px" id="moto"></a>
+  			<div class="overlay3">
+        </div>
+  			</div>
+	<div class="container6">
+  		    <a href="http://example.com" class="alt"><img src="grcar.png" alt="" width="253px" height="218px" id="greentruck"></a>
+  			<div class="overlay6">
+  			</div>
+  	</div>
+  	<div class="container9">
+  		    <a href="http://example.com" class="alt"><img src="policecar.png" alt="" width="253px" height="218px" id="greentruck"></a>
+  			<div class="overlay9">
+  			</div>
+  	</div>
+
+  </div>
+</body>
+
+
+<script src="http://code.jquery.com/jquery-3.2.1.js">
+</script>
+
+<script>
+$(function(){
+  var interval = 5000;
+  $('.slideshow1').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+$(function(){
+  var interval = 5000;
+  $('.slideshow2').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+$(function(){
+  var interval = 5000;
+  $('.slideshow3').each(function(){
+    var timer;
+    var container = $(this);
+    function switchImg(){
+      var anchors = container.find('a');
+      var first = anchors.eq(0);
+      var second = anchors.eq(1);
+      first.fadeOut().appendTo(container);
+      second.fadeIn();}
+
+    function startTimer(){
+      timer = setInterval(switchImg, interval);}
+
+    function stopTimer(){
+      clearInterval(timer);}
+
+    container.find('a').hover(stopTimer,startTimer);
+    startTimer();
+  });
+});
+
+</script>
+
+
+</html>
