@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <script language="JavaScript">
+
+  top.window.moveTo(0,0);
+  if (document.all) {
+  top.window.resizeTo(screen.availWidth,screen.availHeight);
+  }
+  else if (document.layers||document.getElementById) {
+  if (top.window.outerHeight<screen.availHeight||top.window.outerWidth<screen.availWidth){
+  top.window.outerHeight = screen.availHeight;
+  top.window.outerWidth = screen.availWidth;
+  }
+  }
+
+  </script>
+  <script language=javascript>
+moveTo(0,0)
+resizeTo(800,600)
+</script>
+<script src="http://code.jquery.com/jquery-3.2.1.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+
+
+
+
+
+<style media="screen">
+  html{
+    position: relative;
+    /*width: 1280px;*/
+    /*border: 1px solid blue;*/
+  }
+
+  /*기본적인 배치*/
+  .header{background-color: white; width: 1280px; height: 100px;}
+  .floating_left{background-color: white; width: 3%; float: left; margin-left: 20px; margin-top: 120px;}
+  .floating_footer{ width: 30%;  float: left; clear:both; margin-top: 718px; margin-left: 20px;}
+  .floating_footer2{ width: 30%;  float: right;  margin-top: 718px; margin-right: 20px;}
+
+
+
+  /*헤더 배치*/
+  .text1{margin-top: 30px; float: left; font-size: 8px; margin-left: 30px; color: #d3d3d3;}
+  .menu1{margin-top: 20px; margin-left: 250px;}
+  .menu2{margin-top: 20px; margin-left: 200px;}
+
+
+  .custom22{
+      clear: both;
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      margin: 0 auto;
+
+  }
+
+
+</style>
+
+
+</head>
+
+<body>
+<div class="header">
+  <div class="text1">
+    REbrick은 이동수단 블럭 조립 공유 웹 페이지로, <br>
+    여분의 블럭으로 자신만의 소품을 만들고 싶은 사람과 <br>
+    자신만의 블럭 조립을 알려주고 싶은 사람들이 즐길 수 있습니다.
+
+  </div>
+  <img src="upload.png" alt="" class="menu1">
+  <img src="making_pdf.png" alt="" class="menu2">
+</div>
+
+
+  <a href="index.html"><img src="rebrick_name.png" alt="" class="floating_footer"></a>
+  <img src="custom.png" alt="" class="floating_footer2">
+  <img src="custom2.png" alt="" class="custom22" width="438.4‬px" height="864px">
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+</html>
